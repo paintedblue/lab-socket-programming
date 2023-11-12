@@ -24,7 +24,7 @@ def main():
                 data = conn.recv(BUFFER_SIZE)
                 if not data:
                     break
-                currentTime = " " + "new server !!!" + time.ctime(time.time()) + "\r\n"
+                currentTime = " " + "updated !!!" + time.ctime(time.time()) + "\r\n"
                 data = data.decode('utf-8') + currentTime
                 conn.send(data.encode('ascii'))
             except Exception as e:
